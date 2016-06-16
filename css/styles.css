@@ -1,0 +1,44 @@
+/* Accordion. */
+.accordion {
+	background: #fefefe;
+	list-style-type: none;
+	margin-left: 0;
+}
+
+.accordion-title {
+	border: 1px solid #e6e6e6;
+	border-radius: 2px;
+	display: block;
+	line-height: 1;
+	padding: 1.25em 1em;
+	position: relative;
+	margin-bottom: 1em;
+}
+.entry-content .accordion-title  {
+	border-bottom: 1px solid #e6e6e6;
+}
+.accordion-title:hover,
+.accordion-title:focus,
+.accordion-title:active {
+	background-color: #fafafa;
+}
+  
+.accordion-title::before {
+	content: '+';
+	position: absolute;
+	right: 1rem;
+	top: 50%;
+	margin-top: -0.5rem;
+}
+.is-active > .accordion-title::before {
+	content: '–';
+}
+
+.accordion-content {
+	padding: 1em;
+	color: #0a0a0a;
+}
+
+.js .accordion-content {
+	display: none;
+}
