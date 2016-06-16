@@ -112,27 +112,8 @@ final class Test_Accordion {
 		$this->js_uri  = trailingslashit( $this->dir_uri . 'js'  );
 		$this->css_uri = trailingslashit( $this->dir_uri . 'css' );
 		
-		// Enqueue scripts.
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 	}
 	
-	/**
-	 * Enqueues the columns.css stylesheet to make the columns pretty.
-	 *
-	 * @since  0.1.0
-	 * @access public
-	 * @return void
-	 */
-	public function enqueue_scripts() {
-		
-		// Add Foundation accordion styles.
-		wp_enqueue_style( 'test-accordion-styles', $this->css_uri . 'styles.css', array(), '1.0.0' );
-
-		// Add Foundation accordion scripts.
-		wp_enqueue_script( 'test-accordion-foundation', $this->js_uri . 'foundation.js', array( 'jquery' ), '1.0.0', true );
-		wp_enqueue_script( 'test-accordion-app', $this->js_uri . 'app.js', array( 'test-accordion-foundation' ), '1.0.1', true );
-	
-	}
 
 	/**
 	 * Loads include and admin files for the plugin.
@@ -157,10 +138,31 @@ final class Test_Accordion {
 	 * @return void
 	 */
 	private function setup_actions() {
+		
+		// Enqueue scripts.
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 
 		// Internationalize the text strings used.
 		add_action( 'plugins_loaded', array( $this, 'i18n' ), 2 );
 		
+	}
+	
+	/**
+	 * Enqueues scripts and styles.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return void
+	 */
+	public function enqueue_scripts() {
+		
+		// Add Foundation accordion styles.
+		wp_enqueue_style( 'test-accordion-styles', $this->css_uri . 'styles.css', array(), '1.0.0' );
+
+		// Add Foundation accordion scripts.
+		wp_enqueue_script( 'test-accordion-foundation', $this->js_uri . 'foundation.js', array( 'jquery' ), '1.0.0', true );
+		wp_enqueue_script( 'test-accordion-app', $this->js_uri . 'app.js', array( 'test-accordion-foundation' ), '1.0.1', true );
+	
 	}
 
 	/**
