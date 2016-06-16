@@ -12,13 +12,13 @@ But there are times when frameworks like [Foundation](http://foundation.zurb.com
 * Why invent the wheel all over again.
 * Foundation have improved a lot what comes to accessibility.
 
-I wanted to test can I easily use and take only Foundation [Accordion component](http://foundation.zurb.com/sites/docs/accordion.html), research what pros and cons it might have.
+I wanted to test can I easily use and take only Foundation [Accordion component](http://foundation.zurb.com/sites/docs/accordion.html), and research what pros and cons it might have.
 
 This plugin is a proof of concept of that research. I'll try to write a blog post about it sooner or later. 
 
 ## Demo
 
-Demo can be found from Accordion Test Site[https://foxland.fi/demo/test-accordion/](https://foxland.fi/demo/test-accordion/).
+Demo can be found from [Accordion Test Site](https://foxland.fi/demo/test-accordion/).
 
 ## Copyright and License
 
